@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,13 +7,42 @@
     android:layout_height="match_parent"
     tools:context="cn.jerey.sherlockscrollanimation.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <cn.jerey.animationlib.SherlockScrollView
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
 
-</android.support.constraint.ConstraintLayout>
+        <cn.jerey.animationlib.SherlockLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/timg1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="念奴娇·赤壁怀古\n作者：苏轼\n
+                大江东去，浪淘尽，千古风流人物。\n故垒西边，人道是，三国周郎赤壁。\n乱石穿空，惊涛拍岸，卷起千堆雪。\n江山如画，一时多少豪杰。\n遥想公瑾当年，小乔初嫁了，雄姿英发。\n羽扇纶巾，谈笑间，樯橹灰飞烟灭。\n故国神游，多情应笑我，早生华发。\n人生如梦，一尊还酹江月。"
+                android:textSize="17dp"
+                app:anitation_alpha="true"
+
+
+                app:bgColorEnd="#FFFF21"
+                app:bgColorStart="#21FF21"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:background="@mipmap/ic_launcher"
+                app:anitation_alpha="true"
+                app:anitation_translation="left|bottom"/>
+
+        </cn.jerey.animationlib.SherlockLinearLayout>
+    </cn.jerey.animationlib.SherlockScrollView>
+</LinearLayout>
