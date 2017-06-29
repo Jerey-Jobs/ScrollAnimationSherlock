@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ScrollView;
 
 
@@ -45,12 +46,19 @@ public class SherlockScrollView extends ScrollView {
     @Override
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
-
         parseViewGroup(mLinearLayout, l, t, oldl, oldt, true, 0);
-
     }
 
-    private void parseViewGroup(SherlockLinearLayout linearLayout,
+    /**
+     * @param linearLayout
+     * @param l
+     * @param t
+     * @param oldl
+     * @param oldt
+     * @param isRootLinearLayout 是否是顶层布局
+     * @param getTop             距离顶部高度
+     */
+    private void parseViewGroup(ViewGroup linearLayout,
                                 int l, int t, int oldl, int oldt,
                                 boolean isRootLinearLayout, int getTop) {
         int scrollViewHeight = getHeight();
@@ -60,10 +68,10 @@ public class SherlockScrollView extends ScrollView {
             View child = linearLayout.getChildAt(i);
 
             if (!(child instanceof SherlockFrame)) {
-                if (child instanceof SherlockLinearLayout) {
-                    Log.d(TAG, "parseViewGroup: 该View不是FrameLayout,是MyLinearLayout: " + child
+                if (child instanceof ViewGroup) {
+                    Log.d(TAG, "parseViewGroup: 该View不是FrameLayout,是ViewGroup: " + child
                             .getClass().getName());
-                    parseViewGroup((SherlockLinearLayout) child, l, t, oldl, oldt, false,
+                    parseViewGroup((ViewGroup) child, l, t, oldl, oldt, false,
                             child.getTop() + getTop);
                 }
                 continue;
@@ -96,6 +104,7 @@ public class SherlockScrollView extends ScrollView {
 
     /**
      * 求中间大小的值；
+     *
      * @param radio
      * @param minValue
      * @param maxValue

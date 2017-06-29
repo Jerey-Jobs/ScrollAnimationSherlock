@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
  * @1.如果包括解析自定义属性，赋值给自定义LinearLayout.LayoutParams，创建MyFrameLayout赋值包裹子View；
  * @2.不包含自定义属性，不做处理。
  */
-public class SherlockLinearLayout extends LinearLayout implements ISherlockViewGroup{
+public class SherlockLinearLayout extends LinearLayout {
     public SherlockLinearLayout(Context context) {
         super(context);
     }
@@ -81,6 +81,7 @@ public class SherlockLinearLayout extends LinearLayout implements ISherlockViewG
 
         /**
          * 判断当前params是否包含自定义属性；
+         *
          * @return
          */
         public boolean isHaveMyProperty() {

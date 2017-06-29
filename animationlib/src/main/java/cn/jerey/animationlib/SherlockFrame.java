@@ -149,7 +149,6 @@ public class SherlockFrame extends FrameLayout implements SherlockAnitationCallB
             setTranslationX(mWidth);
         if (isContainDirection(TRANSLATION_BOTTOM))
             setTranslationY(mHeight);
-
     }
 
     private boolean isContainDirection(int direction) {
