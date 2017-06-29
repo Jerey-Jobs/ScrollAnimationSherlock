@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_green"
     tools:context="cn.jerey.sherlockscrollanimation.MainActivity">
 
     <cn.jerey.animationlib.SherlockScrollView
@@ -22,14 +23,14 @@
             <include layout="@layout/splash_layout"></include>
 
             <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent">-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
 
-                <!--<ImageView-->
-                    <!--android:id="@+id/imageView"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:background="@drawable/timg1"/>-->
+            <!--<ImageView-->
+            <!--android:id="@+id/imageView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/timg1"/>-->
 
             <!--</LinearLayout>-->
 
@@ -37,49 +38,75 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
                 android:gravity="center"
-                android:text="念奴娇·赤壁怀古\n作者：苏轼\n
-                大江东去，浪淘尽，千古风流人物。\n故垒西边，人道是，三国周郎赤壁。\n乱石穿空，惊涛拍岸，卷起千堆雪。\n江山如画，一时多少豪杰。\n遥想公瑾当年，小乔初嫁了，雄姿英发。\n羽扇纶巾，谈笑间，樯橹灰飞烟灭。\n故国神游，多情应笑我，早生华发。\n人生如梦，一尊还酹江月。"
-                android:textSize="17dp"
+                android:text="欢迎来到Gank.io"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
                 app:anitation_alpha="true"
-                app:anitation_translation="right"
-                app:bgColorEnd="#FFFF21"
-                app:bgColorStart="#21FF21"/>
+                app:anitation_translation="top"
+                app:bgColorEnd="#54c6ff"
+                app:bgColorStart="#c9edf1"/>
 
             <cn.jerey.animationlib.SherlockRelativeLayout
-                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="300dp">
 
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="180dp"
-                    android:background="@mipmap/ic_launcher"
-                    app:anitation_alpha="true"
-                    app:anitation_translation="right|top"/>
 
                 <ImageView
+                    android:id="@+id/moon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/moon"
+                    app:anitation_alpha="true"
+                    app:anitation_translation="left"/>
+
+                <ImageView
+                    android:id="@+id/astronaut"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/astronaut"
+                    app:anitation_alpha="true"
+                    app:anitation_translation="right|bottom"/>
+
+                <ImageView
+                    android:id="@+id/imageView"
                     android:layout_width="200dp"
                     android:layout_height="180dp"
-                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginTop="44dp"
-                    android:background="@mipmap/ic_launcher"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/planet_earth_1"
                     app:anitation_alpha="true"
-                    app:anitation_translation="left|bottom"/>
+                    app:anitation_translation="right|bottom"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/rocket_1"
+                    app:anitation_alpha="true"/>
 
             </cn.jerey.animationlib.SherlockRelativeLayout>
 
 
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="180dp"
-                android:background="@mipmap/ic_launcher"
+            <Button
+                android:id="@+id/enter_btn"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/btn_bg"
                 app:anitation_alpha="true"
-                app:anitation_translation="left|bottom"/>
+                app:anitation_translation="bottom"
+                android:text="点击进入"
+                android:textColor="@android:color/white"/>
+
 
         </cn.jerey.animationlib.SherlockLinearLayout>
     </cn.jerey.animationlib.SherlockScrollView>

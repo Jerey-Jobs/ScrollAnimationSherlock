@@ -112,43 +112,59 @@ public class SherlockFrame extends FrameLayout implements SherlockAnitationCallB
     @Override
     public void excuteAnitation(float moveRadio) {
         //设置动画；
-        if (mAlphaSupport)
+        if (mAlphaSupport) {
             setAlpha(moveRadio);
-        if (mScaleXSupport)
+        }
+        if (mScaleXSupport) {
             setScaleX(moveRadio);
-        if (mScaleYSupport)
+        }
+        if (mScaleYSupport) {
             setScaleY(moveRadio);
+        }
         //从左边移动到原位置；
-        if (isContainDirection(TRANSLATION_LEFT))
+        if (isContainDirection(TRANSLATION_LEFT)) {
             setTranslationX(-mWidth * (1 - moveRadio));
-        if (isContainDirection(TRANSLATION_TOP))
+        }
+
+        if (isContainDirection(TRANSLATION_TOP)) {
             setTranslationY(-mHeight * (1 - moveRadio));
-        if (isContainDirection(TRANSLATION_RIGHT))
+        }
+        if (isContainDirection(TRANSLATION_RIGHT)) {
             setTranslationX(mWidth * (1 - moveRadio));
-        if (isContainDirection(TRANSLATION_BOTTOM))
+        }
+        if (isContainDirection(TRANSLATION_BOTTOM)) {
             setTranslationY(mHeight * (1 - moveRadio));
-        if (mBgColorStart != -1 && mBgColorEnd != -1)
+        }
+        if (mBgColorStart != -1 && mBgColorEnd != -1) {
             setBackgroundColor((int) mArgbEvaluator.evaluate(moveRadio, mBgColorStart, mBgColorEnd));
+        }
     }
 
     //
     @Override
     public void resetViewAnitation() {
-        if (mAlphaSupport)
+        if (mAlphaSupport) {
             setAlpha(0);
-        if (mScaleXSupport)
+
+        }
+        if (mScaleXSupport) {
             setScaleX(0);
-        if (mScaleYSupport)
+        }
+        if (mScaleYSupport) {
             setScaleY(0);
-        //从左边移动到原位置；
-        if (isContainDirection(TRANSLATION_LEFT))
+        }//从左边移动到原位置；
+        if (isContainDirection(TRANSLATION_LEFT)) {
             setTranslationX(-mWidth);
-        if (isContainDirection(TRANSLATION_TOP))
+        }
+        if (isContainDirection(TRANSLATION_TOP)) {
             setTranslationY(-mHeight);
-        if (isContainDirection(TRANSLATION_RIGHT))
+        }
+        if (isContainDirection(TRANSLATION_RIGHT)) {
             setTranslationX(mWidth);
-        if (isContainDirection(TRANSLATION_BOTTOM))
+        }
+        if (isContainDirection(TRANSLATION_BOTTOM)) {
             setTranslationY(mHeight);
+        }
     }
 
     private boolean isContainDirection(int direction) {

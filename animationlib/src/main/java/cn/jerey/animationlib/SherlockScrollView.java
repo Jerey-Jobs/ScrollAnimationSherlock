@@ -90,7 +90,7 @@ public class SherlockScrollView extends ScrollView {
             //进入了屏幕
             if (childAbsluteTop <= scrollViewHeight) {
                 //当前子控件显示出来的高度；
-                int childShowHeight = scrollViewHeight - childAbsluteTop;
+                int childShowHeight = scrollViewHeight - childAbsluteTop - 100 ;
                 float moveRadio = childShowHeight / (float) childHeight;//这里一定要转化成float类型；
                 //执行动画；
                 myCallBack.excuteAnitation(getMiddleValue(moveRadio, 0, 1));
@@ -104,7 +104,6 @@ public class SherlockScrollView extends ScrollView {
 
     /**
      * 求中间大小的值；
-     *
      * @param radio
      * @param minValue
      * @param maxValue

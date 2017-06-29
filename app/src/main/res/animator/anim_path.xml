@@ -14,7 +14,7 @@
         androd:propertyName="strokeColor"
         androd:repeatCount="infinite"
         androd:repeatMode="reverse"
-        androd:valueFrom="@android:color/holo_red_dark"
+        androd:valueFrom="#554f8d"
         androd:valueTo="@android:color/holo_blue_dark"
         androd:valueType="colorType">
     </objectAnimator>
