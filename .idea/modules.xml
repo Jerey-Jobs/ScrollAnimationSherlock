@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ScrollAnimationSherlock.iml" filepath="$PROJECT_DIR$/ScrollAnimationSherlock.iml" />
       <module fileurl="file://$PROJECT_DIR$/SherlockScrollAnimation.iml" filepath="$PROJECT_DIR$/SherlockScrollAnimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationlib/animationlib.iml" filepath="$PROJECT_DIR$/animationlib/animationlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animationlib/animationlib.iml" filepath="$PROJECT_DIR$/animationlib/animationlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
