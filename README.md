@@ -6,10 +6,12 @@ an animation framework for optical parallax scroll effects
 --------
 ![](/pic/gank_welcome.gif)
 
-一个用来打造上述动画效果的Scroll框架。
+一个用来打造上述动画效果的Scroll框架, 学习.
 
 目前支持：
--
+- 透明度动画与平移动画(四种方向),支持混合调用
+- SherlockLinearLayout与SherlockRelativeLayout提供线性布局与相对布局支持
+- SherlockAnimationCallBack提供自定义扩展
 
 
 -------

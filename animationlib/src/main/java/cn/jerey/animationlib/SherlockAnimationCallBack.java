@@ -4,7 +4,7 @@ package cn.jerey.animationlib;
  * @Explain：执行动画回调，在MyFramelayout中实现；
  */
 
-public interface SherlockAnitationCallBack {
+public interface SherlockAnimationCallBack {
     /**
      * 执行自定义动画方法；
      */

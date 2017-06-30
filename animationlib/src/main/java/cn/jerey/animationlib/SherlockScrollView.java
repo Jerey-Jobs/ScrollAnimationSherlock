@@ -10,9 +10,6 @@ import android.widget.ScrollView;
 
 /**
  * @Explain：自定义ScrollView，获取滚动监听，根据不同情况进行动画；
- * @Author:LYL
- * @Version:
- * @Time:2017/6/14
  */
 
 public class SherlockScrollView extends ScrollView {
@@ -67,7 +64,8 @@ public class SherlockScrollView extends ScrollView {
             //如果子控件不是MyFrameLayout则循环下一个子控件；
             View child = linearLayout.getChildAt(i);
 
-            if (!(child instanceof SherlockFrame)) {
+            // 若不是动画控件,则进入判断是否是ViewGroup,是的话递归其子view.不是的话则判断下一个
+            if (!(child instanceof SherlockAnimationCallBack)) {
                 if (child instanceof ViewGroup) {
                     Log.d(TAG, "parseViewGroup: 该View不是FrameLayout,是ViewGroup: " + child
                             .getClass().getName());
@@ -77,7 +75,7 @@ public class SherlockScrollView extends ScrollView {
                 continue;
             }
             //以下为执行动画逻辑；
-            SherlockAnitationCallBack myCallBack = (SherlockAnitationCallBack) child;
+            SherlockAnimationCallBack myCallBack = (SherlockAnimationCallBack) child;
             //获取子View高度；
             int childHeight = child.getHeight();
             //子控件到父控件的距离；

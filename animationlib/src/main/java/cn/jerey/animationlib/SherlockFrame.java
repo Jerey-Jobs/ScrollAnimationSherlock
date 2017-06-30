@@ -15,7 +15,7 @@ import android.widget.FrameLayout;
  * @Time:2017/6/14
  */
 
-public class SherlockFrame extends FrameLayout implements SherlockAnitationCallBack {
+public class SherlockFrame extends FrameLayout implements SherlockAnimationCallBack {
     //从哪个方向开始动画；
     private static final int TRANSLATION_LEFT = 0x01;
     private static final int TRANSLATION_TOP = 0x02;
