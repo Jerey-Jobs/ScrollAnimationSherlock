@@ -67,12 +67,12 @@ public class SherlockRelativeLayout extends RelativeLayout {
         public RelativeLayoutParams(Context c, AttributeSet attrs) {
             super(c, attrs);
             TypedArray typedArray = c.obtainStyledAttributes(attrs, R.styleable.MyFrameLayout);
-            mAlphaSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_anitation_alpha, false);
+            mAlphaSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_animation_alpha, false);
             mBgColorStart = typedArray.getColor(R.styleable.MyFrameLayout_bgColorStart, -1);
             mBgColorEnd = typedArray.getColor(R.styleable.MyFrameLayout_bgColorEnd, -1);
-            mScaleXSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_anitation_scaleX, false);
-            mScaleYSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_anitation_scaleY, false);
-            mTranslationValue = typedArray.getInt(R.styleable.MyFrameLayout_anitation_translation, -1);
+            mScaleXSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_animation_scaleX, false);
+            mScaleYSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_animation_scaleY, false);
+            mTranslationValue = typedArray.getInt(R.styleable.MyFrameLayout_animation_translation, -1);
             typedArray.recycle();
         }
 

@@ -91,10 +91,10 @@ public class SherlockScrollView extends ScrollView {
                 int childShowHeight = scrollViewHeight - childAbsluteTop - 100 ;
                 float moveRadio = childShowHeight / (float) childHeight;//这里一定要转化成float类型；
                 //执行动画；
-                myCallBack.excuteAnitation(getMiddleValue(moveRadio, 0, 1));
+                myCallBack.excuteanimation(getMiddleValue(moveRadio, 0, 1));
             } else {
                 //没在屏幕内,恢复数据；
-                myCallBack.resetViewAnitation();
+                myCallBack.resetViewanimation();
             }
         }
     }

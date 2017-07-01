@@ -30,13 +30,13 @@ public class SherlockLinearLayout extends LinearLayout {
     @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs) {
         //返回自己定义的Params.
-        return new MyLayoutParams(getContext(), attrs);
+        return new LinearLayoutParams(getContext(), attrs);
     }
 
     @Override
     public void addView(View child, int index, ViewGroup.LayoutParams params) {
         //看源码可知addView的第三个参数（params）就是我们在generateLayoutParams（）方法中设置的自定义Params;
-        MyLayoutParams myLayoutParams = (MyLayoutParams) params;
+        LinearLayoutParams myLayoutParams = (LinearLayoutParams) params;
         if (myLayoutParams.isHaveMyProperty()) {
             SherlockFrame myFrameLayout = new SherlockFrame(getContext());
             myFrameLayout.addView(child);
@@ -54,7 +54,7 @@ public class SherlockLinearLayout extends LinearLayout {
     }
 
     //自定义LayoutParams,存储从子控件获取的自定义属性。
-    public class MyLayoutParams extends LayoutParams {
+    public class LinearLayoutParams extends LayoutParams {
         //是否支持透明度；
         public boolean mAlphaSupport;
         //是否支持X Y轴缩放；
@@ -67,21 +67,20 @@ public class SherlockLinearLayout extends LinearLayout {
         //移动值；
         public int mTranslationValue;
 
-        public MyLayoutParams(Context c, AttributeSet attrs) {
+        public LinearLayoutParams(Context c, AttributeSet attrs) {
             super(c, attrs);
             TypedArray typedArray = c.obtainStyledAttributes(attrs, R.styleable.MyFrameLayout);
-            mAlphaSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_anitation_alpha, false);
+            mAlphaSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_animation_alpha, false);
             mBgColorStart = typedArray.getColor(R.styleable.MyFrameLayout_bgColorStart, -1);
             mBgColorEnd = typedArray.getColor(R.styleable.MyFrameLayout_bgColorEnd, -1);
-            mScaleXSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_anitation_scaleX, false);
-            mScaleYSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_anitation_scaleY, false);
-            mTranslationValue = typedArray.getInt(R.styleable.MyFrameLayout_anitation_translation, -1);
+            mScaleXSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_animation_scaleX, false);
+            mScaleYSupport = typedArray.getBoolean(R.styleable.MyFrameLayout_animation_scaleY, false);
+            mTranslationValue = typedArray.getInt(R.styleable.MyFrameLayout_animation_translation, -1);
             typedArray.recycle();
         }
 
         /**
          * 判断当前params是否包含自定义属性；
-         *
          * @return
          */
         public boolean isHaveMyProperty() {

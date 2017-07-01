@@ -44,8 +44,8 @@
                 android:text="欢迎来到Gank.io"
                 android:textColor="#ffffff"
                 android:textSize="40sp"
-                app:anitation_alpha="true"
-                app:anitation_translation="top"
+                app:animation_alpha="true"
+                app:animation_translation="top"
                 app:bgColorEnd="#54c6ff"
                 app:bgColorStart="#c9edf1"/>
 
@@ -61,8 +61,8 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/moon"
-                    app:anitation_alpha="true"
-                    app:anitation_translation="left"/>
+                    app:animation_alpha="true"
+                    app:animation_translation="left"/>
 
                 <ImageView
                     android:id="@+id/astronaut"
@@ -71,8 +71,8 @@
                     android:layout_marginLeft="120dp"
                     android:layout_marginTop="28dp"
                     android:background="@drawable/astronaut"
-                    app:anitation_alpha="true"
-                    app:anitation_translation="right|bottom"/>
+                    app:animation_alpha="true"
+                    app:animation_translation="right|bottom"/>
 
                 <ImageView
                     android:id="@+id/imageView"
@@ -81,8 +81,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="100dp"
                     android:background="@drawable/planet_earth_1"
-                    app:anitation_alpha="true"
-                    app:anitation_translation="right|bottom"/>
+                    app:animation_alpha="true"
+                    app:animation_translation="right|bottom"/>
 
                 <ImageView
                     android:layout_width="100dp"
@@ -90,7 +90,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="30dp"
                     android:background="@drawable/rocket_1"
-                    app:anitation_alpha="true"/>
+                    app:animation_alpha="true"/>
 
             </cn.jerey.animationlib.SherlockRelativeLayout>
 
@@ -102,8 +102,8 @@
                 android:layout_marginTop="90dp"
                 android:layout_marginBottom="60dp"
                 android:background="@drawable/btn_bg"
-                app:anitation_alpha="true"
-                app:anitation_translation="bottom"
+                app:animation_alpha="true"
+                app:animation_translation="bottom"
                 android:text="点击进入"
                 android:textColor="@android:color/white"/>
 

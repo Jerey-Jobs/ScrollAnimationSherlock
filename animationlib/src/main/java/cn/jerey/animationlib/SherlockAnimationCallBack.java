@@ -8,10 +8,10 @@ public interface SherlockAnimationCallBack {
     /**
      * 执行自定义动画方法；
      */
-    void excuteAnitation(float moveRadio);
+    void excuteanimation(float moveRadio);
 
     /**
      * 恢复初始状态；
      */
-    void resetViewAnitation();
+    void resetViewanimation();
 }

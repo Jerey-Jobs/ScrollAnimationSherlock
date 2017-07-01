@@ -10,9 +10,6 @@ import android.widget.FrameLayout;
 
 /**
  * @Explain：自定义FrameLayout包裹子View,执行动画；
- * @Author:LYL
- * @Version:
- * @Time:2017/6/14
  */
 
 public class SherlockFrame extends FrameLayout implements SherlockAnimationCallBack {
@@ -110,7 +107,7 @@ public class SherlockFrame extends FrameLayout implements SherlockAnimationCallB
     }
 
     @Override
-    public void excuteAnitation(float moveRadio) {
+    public void excuteanimation(float moveRadio) {
         //设置动画；
         if (mAlphaSupport) {
             setAlpha(moveRadio);
@@ -142,7 +139,7 @@ public class SherlockFrame extends FrameLayout implements SherlockAnimationCallB
 
     //
     @Override
-    public void resetViewAnitation() {
+    public void resetViewanimation() {
         if (mAlphaSupport) {
             setAlpha(0);
 
