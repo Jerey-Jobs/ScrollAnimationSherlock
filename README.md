@@ -15,6 +15,25 @@ an animation framework for optical parallax scroll effects
 - SherlockAnimationCallBack提供自定义扩展
 
 如何使用
+
+project's build.gradle (工程下的 build.gradle)
+``` gradle
+  allprojects {
+    repositories {
+      ...
+      maven { url 'https://jitpack.io' }
+    }
+  }
+```
+
+module's build.gradle (模块的build.gradle)
+``` gradle
+  dependencies {
+          compile 'com.github.Jerey-Jobs:ScrollAnimationSherlock:1.0'
+  }
+```
+
+项目中：
 ---
 顶层布局:cn.jerey.animationlib.SherlockScrollView，内嵌一个`SherlockLinearLayout`
 ``` xml
